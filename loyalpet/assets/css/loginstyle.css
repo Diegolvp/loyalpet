@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.gradient{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#1249D8, #13C6FF);
+}
+.login_area{
+    background-color: #f3f3f3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_area img{
+    width: 120px;
+    margin: 20px 0 20px 0;
+}
+.bv{
+    font-size: 30px;
+    color: #613A00;
+    font-weight: bold;
+}
+.txt{
+    color: #613A00;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form_bkgnd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 25px;
+    width: 50%;
+    box-shadow: 0 0 13px rgba(128, 128, 128, 0.308);
+}
+form{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.input_lg_form  {
+    border: none;
+    padding-left: 55px;
+    border-radius: 30px;
+    height: 50px;
+    width: 100%;
+    background-color: #d5d5d5;
+}
+.btn_entrar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #1249D8;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    height: 115px;
+}
+.btn_entrar:hover{
+    background-color: #275ce0;
+    cursor: pointer;
+}
+.input i{
+    color: #898989;
+    margin-left: 20px;
+    font-size: 24px;
+    position: absolute;
+}
+.input{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: start;
+}
+.risco{
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+}
+form a{
+    margin-top: 10px;
+    color: #0089ED;
+    font-size: 13px;
+}
+.lembrar{
+    margin-left: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+.lembrar span{
+    margin-left: 10px;
+    color: #898989;
+    font-weight: 500;
+    font-size: 14px;
+}
+.lembrar span:hover{
+    cursor: pointer;
+}
+.dog{
+    position: absolute;
+    top: calc(100vh - 180px);
+    width: 240px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .gradient {
+      display: none;
+    }
+    .form_bkgnd{
+        width: 80%;
+    }
+  }
