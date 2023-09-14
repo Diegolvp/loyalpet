@@ -67,12 +67,10 @@ a:hover {
     color: var(--red);
     display: inline;
     display: block;
-    transition: margin-top 0.6s;
 }
 
 #guias a:hover {
     color: var(--blue);;
-    margin-top: 5px;
 }
 
 .entrar {
@@ -81,12 +79,10 @@ a:hover {
     padding: 16px;
     margin: -15px;
     display: block;
-    transition: all 0.6s;
 }
 
 .entrar:hover {
     background-color: #dae6ff;
-    margin-top: 0.1px;
 }
 
 .cadastrar {
@@ -100,7 +96,6 @@ a:hover {
 
 .cadastrar:hover {
     background-color: #588afa;
-    margin-top: 6px;
 }
 
 #login{
@@ -191,7 +186,8 @@ a:hover {
     margin-top: 20px;
     max-width: 82%;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, 247px);
+    justify-content: space-between;
     padding: 0;
     gap: 15px;
   }
