@@ -246,7 +246,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 82%;
+    width: 100%;
 }
 .btn_vermais:hover{
     scale: 1.05;

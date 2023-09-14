@@ -118,17 +118,29 @@ form a{
 .lembrar span:hover{
     cursor: pointer;
 }
+.img_dog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden  !important;
+    width: 40% !important;
+    height: 100% !important;
+}
 .dog{
-    position: absolute;
-    top: calc(100vh - 180px);
-    width: 240px !important;
+    width: 100%  !important;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     .gradient {
       display: none;
     }
     .form_bkgnd{
         width: 80%;
     }
-  }
+}
+
+@media only screen and (max-width: 400px) {
+    .dog{
+        display: none;
+    }
+}
