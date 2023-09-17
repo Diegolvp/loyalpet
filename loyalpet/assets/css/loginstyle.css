@@ -109,14 +109,11 @@ form a{
     justify-content: start;
     align-items: center;
 }
-.span_lembrar{
+.label_lembrar{
     margin-left: 10px;
     color: #898989;
     font-weight: 500;
     font-size: 0.87rem;
-}
-.span_lembrar:hover{
-    cursor: pointer;
 }
 .img_dog{
     display: flex ;

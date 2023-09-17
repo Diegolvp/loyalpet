@@ -29,6 +29,8 @@ body{
 }
 .bv{
     font-size: 1.875em;
+    text-align: center;
+    margin-bottom: 5px;
     color: #613A00;
     font-weight: bold;
 }
@@ -104,6 +106,9 @@ small{
     text-decoration: none;
     color: #1249D8;
     font-weight: bold;
+}
+.pri_link:hover{
+    color: #ffb700;
 }
 .input_lg_form  {
     border: none;

@@ -27,7 +27,7 @@
                 </div>
                 <div class="lembrar">
                     <input id="checkLembrar" type="checkbox" name="lembrar" id="">
-                    <span class="span_lembrar">Lembrar de mim</span>
+                    <label class="label_lembrar" for="checkLembrar">Lembrar de mim</span>
                 </div>
                 <input class="btn_entrar" type="submit" value="Entrar">
                 <div class="risco"></div>
@@ -38,12 +38,4 @@
         <div class="img_dog"><img class="dog" src="assets/img/dogfeliz.png" alt=""></div>
     </div>
 </body>
-<script>
-    txtLembrar = document.querySelector('.span_lembrar')
-    checkbox = document.getElementById('checkLembrar')
-
-    txtLembrar.addEventListener("click", ()=>{
-        checkbox.checked = !checkbox.checked
-    })
-</script>
 </html>
