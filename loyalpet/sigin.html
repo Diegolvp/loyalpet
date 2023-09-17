@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyal Pet | Cadastro</title>
+    <link rel="stylesheet" href="assets/css/siginstyle.css">
+    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/img/logo1.png" type="image/x-icon">
+    <script src="assets/js/estadoscidades.js"></script>
+</head>
+<body>
+    <div class="sigin_area">
+        <a href="index.html"><img class="logo" src="assets/img/logo1.png" alt=""></a>
+        <div class="intro_comp">
+            <span class="bv">Novo usuário, parceiro ou vendedor!?</span>
+            <span class="txt">Faça seu cadastro e entre na Loyal Pet para adotar um companheiro, divulgar um pet, ser um vendedor ou comprar produtos pet das melhores marcas do mercado. </span>
+        </div>
+        <div class="form_bkgnd">
+            <form action="">
+                <div class="types">
+                    <label class="label_tit" for="options">Qual seria seu tipo de conta?<span class="obr">*</span></label>
+                    <div class="options">
+                        <div class="option"><input type="radio" name="type" id="adota"><label for="adota"> Quero divulgar e adotar pets</label></div>
+                        <div class="option"><input type="radio" name="type" id="vende"><label for="vende"> Quero ser um parceiro ou vendedor</label></div>
+                    </div> 
+                </div>
+                <div class="form_field">
+                    <label class="label_tit" for="nome">Nome completo<span class="obr">*</span></label>
+                    <input class="inputSigin" type="text" name="nome" id="nome">
+                </div>
+                <div class="form_field">
+                    <label class="label_tit" for="user">Usuário<span class="obr">*</span></label>
+                    <input class="inputSigin" type="text" name="user" id="user">
+                </div>
+                <div class="form_field">
+                    <label class="label_tit" for="email">E-mail<span class="obr">*</span></label>
+                    <input class="inputSigin" type="email" name="email" id="email">
+                </div>
+                <div class="form_field">
+                    <label class="label_tit" for="confemail">Confirmar e-mail<span class="obr">*</span></label>
+                    <input class="inputSigin" type="email" name="confemail" id="confemail">
+                </div>
+                <div style="margin-top: 20px;" class="types">
+                    <label class="label_tit" for="options">Gênero<span class="obr">*</span></label>
+                    <div class="options">
+                        <div class="option"><input type="radio" name="gen" id="masc"><label for="masc"> Masculino</label></div>
+                        <div class="option"><input type="radio" name="gen" id="fem"><label for="fem"> Feminino</label></div>
+                        <div class="option"><input type="radio" name="gen" id="noinf"><label for="noinf"> Prefiro não informar</label></div>
+                    </div> 
+                </div>
+                <div class="form_field">
+                    <label class="label_tit" for="zap">Whatsapp<span class="obr">*</span></label>
+                    <input class="inputSigin" type="tel" maxlength="11" name="zap" id="zap">
+                </div>
+                <div class="gd">
+                    <div class="sep">
+                        <label class="label_tit" for="est">Estado<span class="obr">*</span></label>
+                        <select name="estados" onchange="chngEst()" id="est"></select>
+                    </div>
+                    <div class="sep">
+                        <label class="label_tit" for="city">Cidade<span class="obr">*</span></label>
+                        <select name="cidades" id="city"></select>
+                    </div>
+                </div>
+                <div class="gd">
+                    <div class="sep">
+                        <label class="label_tit" for="password">Senha<span class="obr">*</span></label>
+                        <input class="inputSigin" type="password" name="senha" id="password">
+                    </div>
+                    <div class="sep">
+                        <label class="label_tit" for="confpassword">Confirmar senha<span class="obr">*</span></label>
+                        <input class="inputSigin" type="password" name="confsenha" id="confpassword">
+                    </div>
+                </div>
+                <small>Ao clicar no botão você estará automaticamente concordando com os nossos<a class="pri_link" href=""> Termos de Uso e Política de Privacidade do site Loyal Pet.</a></small>
+                <input class="btn_cadastrar" type="submit" value="Cadastrar">
+                <div class="risco"></div>
+                <a class="lg_link" href="login.html">Ja possui cadastro? Faça login</a>
+            </form>
+        </div>
+        <div style="margin-top: 20px;" class="end">&nbsp;</div>
+        <div class="img_dog"><img class="dog" src="assets/img/dogfeliz.png" alt=""></div>
+    </div>
+</body>
+<script>
+    var estadoscidades = JSON.parse(jsonestadoscidades)
+    var estSelect = document.getElementById('est')
+    var citySelect = document.getElementById('city')
+
+    for(let i in estadoscidades.estados)
+    {
+        var opt = document.createElement('option')
+        opt.value = estadoscidades.estados[i].nome
+        opt.innerHTML = estadoscidades.estados[i].nome;
+        estSelect.appendChild(opt)
+    }
+
+    estSelect.addEventListener("change", chngEst)
+    
+    function chngEst() {
+        var child = citySelect.lastElementChild; 
+        while (child) {
+            citySelect.removeChild(child);
+            child = citySelect.lastElementChild;
+        }
+        for(let i in estadoscidades.estados[estSelect.selectedIndex].cidades)
+        {
+            var opt = document.createElement('option')
+            opt.value = estadoscidades.estados[estSelect.selectedIndex].cidades[i]
+            opt.innerHTML = estadoscidades.estados[estSelect.selectedIndex].cidades[i]
+            citySelect.appendChild(opt)
+        }
+    }
+</script>
+</html>
