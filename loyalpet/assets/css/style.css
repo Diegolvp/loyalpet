@@ -31,7 +31,7 @@ body {
     background-color: #E5E5E5;
 }
 
-nav {
+#menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,14 +40,14 @@ nav {
     box-shadow: 3px 0 3px gray;
 }
 
-nav ul {
+#menu ul {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav ul li {
+#menu ul li {
     margin: 20px;
 }
 
@@ -470,6 +470,12 @@ i{
     align-items: center;
     justify-content: space-between;
 }
+.limit_area{
+    display: flex;
+    width: 82%;
+    flex-direction: column;
+    margin-top: 40px;
+}
 
 @media screen and (max-width: 768px) {
     #guias {
@@ -483,7 +489,7 @@ i{
         padding: 16px;
         background-color: #dae6ff;
     }
-    nav{
+    #menu{
         display: flex;
         align-items: center;
         justify-content: center;

@@ -9,12 +9,6 @@ main{
     justify-content: center;
     align-items: center;
 }
-.limit_area{
-    display: flex;
-    width: 82%;
-    flex-direction: column;
-    margin-top: 40px;
-}
 .pri_link{
     text-align: center;
     text-decoration: none;
@@ -66,7 +60,7 @@ input[type=text], select{
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 14px;
     box-sizing: border-box;
 }
 input[type=text]::placeholder{
@@ -115,7 +109,7 @@ input[type=text]::placeholder{
     font-weight: bold;
     padding: 15px;
     margin-bottom: 20px;
-    width: 250px;
+    width: 220px;
     border-radius: 35px;
     text-align: center;
     border:none;
@@ -172,6 +166,39 @@ input[type=text]::placeholder{
     color: #7c7c7c;
     margin-bottom: 20px;
 }
+.pages{
+    margin-top: 20px;
+    width: 100%;
+}
+nav[aria-label="page navigation"]{
+    display: flex;
+    justify-content: flex-end;
+}
+ul.pagination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul.pagination li{
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    border-width: 1px;
+    margin-right: 0.75rem;
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+}
+ul.pagination li.active{
+    background-color: #1249D8;
+}
+ul.pagination li{
+    background-color: #fff;
+}
+ul.pagination li.active a{
+    color: #fff;
+}
+ul.pagination li a{
+    color: #1249D8;
+}
 
 @media (max-width: 639px) {
     .grid-pets{
@@ -214,7 +241,7 @@ input[type=text]::placeholder{
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .btn_busca{
-        width: 250px;
+        width: 220px;
     }
     .div_sumb{
         width: 95%;
@@ -225,7 +252,7 @@ input[type=text]::placeholder{
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .btn_busca{
-        width: 250px;
+        width: 220px;
     }
     .div_sumb{
         width: 95%;

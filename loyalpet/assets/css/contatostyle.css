@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612:ital@1&family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Inter';
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cnt-bkgnd{
+    background-image: url(../img/cntct.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+}
+.img-cnt-bkgnd div.cnt-content{
+    text-align: center;
+    display: flex;
+    margin-top: -90px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img-cnt-bkgnd div.cnt-content span.cnt-title{
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Inter';
+}
+.img-cnt-bkgnd div.cnt-content span.cnt_fra{
+    font-family: 'Inter';
+    font-size: 1rem;
+    color: white;
+}
+.gd_contact{
+    margin-top: -100px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+.block-field{
+    background-color: #fff;
+    color: #425466;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 13px rgba(128, 128, 128, 0.308);
+
+}
+.contato-inf{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.inf-txt{
+    font-size: 0.9rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.inf-hor{
+    font-size: 0.9rem;
+}
+.ico{
+    color: #425466;
+}
+.ico-title{
+    font-weight: bold;
+}
+.btn_sup{
+    margin-top: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 180px;
+    padding: 15px;
+    background-color: #1249D8;
+}
+.btn_sup:hover{
+    cursor: pointer;
+    background-color: #275ce0;
+}
+.cnt-link{
+    margin-top: 20px;
+}
+
+@media (max-width: 880px) {
+    .gd_contact{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+@media (min-width: 880px) {
+    .grid-pets{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
