@@ -17,12 +17,12 @@ nav{
     width: 100%;
     box-shadow: 3px 0 3px gray;
 }
-nav img{
+nav #logo{
     width: 115px;
-    padding: 0 128px;
+    padding: 0 0 0 128px;
 }
 nav #guias{
-    margin-right: 220px;
+    margin-right: 100px;
     float: right;
 }
 nav li{
@@ -75,22 +75,43 @@ nav .login{
 nav #icon{
     color: rgb(54, 59, 63);
     font-size: 30px;
+    margin-left: 120px;
     line-height: 80px;
-    float: right;
+    float: left;
     cursor: pointer;
     display: none;
 }
-@media (max-width: 1048px){
+@media (max-width: 1300px){
     nav #icon{
         display: block;
+        transform: rotate(0);
+        transition: all 0.5s;
+    }
+    nav #logo{
+        padding: 0 0 0 calc((100vw / 2) - 256px);
     }
     nav #guias{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: white;
+        background-color: #1656e5;
         top: 80px;
-        left: 0;
+        left: -100%;
         text-align: center;
+        transition: all 0.5s;
+    }
+    nav #guias li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        color: white !important;
+    }
+    nav #guias.show{
+        left: 0;
+    }
+    nav #icon.rotate{
+        transform: rotate(90deg);
     }
 }

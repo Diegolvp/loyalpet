@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loyal Pet | Parcerias</title>
     <link rel="stylesheet" href="./assets/css/parceriasstyle.css">
-    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+                $('#icon').toggleClass('rotate');
+            })
+        })
+    </script>
+</head>
 <body>
     <nav id="menu">
+        <label id="icon" for="">
+            <i class="fas fa-bars"></i>
+        </label>
         <img id="logo" src="assets/img/logo1.png" alt="logo">
-        <div style="float: right;">
-            <div class="login">
-                <ul>
-                    <li style="line-height: 80px;"><a href="login.html"><button class="entrar">Entrar</button></a></li>
-                    <li><a href="sigin.html"><button class="cadastrar">Cadastrar</button></a></li>
-                </ul>
-            </div>
-            <ul id="guias">
-                <li><b><a href="index.html">Home</a></b></li>
-                <li><b><a href="sobre.html">Sobre</a></b></li>
-                <li><b><a href="queroadotar.html">Quero adotar</a></b></li>
-                <li><b><a href="produtos.html">Produtos</a></b></li>
-                <li><b><a href="parcerias.html">Parcerias</a></b></li>
-                <li><b><a href="contato.html">Contato</a></b></li>
+        <div class="login">
+            <ul>
+                <li style="line-height: 80px;"><a href="login.html"><button class="entrar">Entrar</button></a></li>
+                <li><a href="sigin.html"><button class="cadastrar">Cadastrar</button></a></li>
             </ul>
-            <label id="icon" for="">
-                <i class="fas fa-bars"></i>
-            </label>
         </div>
-        
+        <ul id="guias">
+            <li><b><a href="index.html">Home</a></b></li>
+            <li><b><a href="sobre.html">Sobre</a></b></li>
+            <li><b><a href="queroadotar.html">Quero adotar</a></b></li>
+            <li><b><a href="produtos.html">Produtos</a></b></li>
+            <li><b><a href="parcerias.html">Parcerias</a></b></li>
+            <li><b><a href="contato.html">Contato</a></b></li>
+        </ul>
 </body>
 </html>
