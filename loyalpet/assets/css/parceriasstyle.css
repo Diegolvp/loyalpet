@@ -81,6 +81,42 @@ nav #icon{
     cursor: pointer;
     display: none;
 }
+.limit_area{
+    display: flex;
+    width: 41%;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(158, 158, 158, 0.329);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Bree Serif';
+    font-weight: bold;
+    color: #1656e5;
+}
+.grid_marcas{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+.grid_marcas .box-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_marcas .img_parc{
+    width: 130px;
+}
+
 @media (max-width: 1300px){
     nav #icon{
         display: block;
